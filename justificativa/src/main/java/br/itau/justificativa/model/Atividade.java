@@ -2,17 +2,20 @@ package br.itau.justificativa.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "itmn232_atividade")
+@Table(name = "itmn232_atividade")
+
 public class Atividade {
 
-    @Column (name = "id_atividade")
-    public int id_atividade;
+    @Id
+    @Column(name = "id_atividade")
+    private int id_atividade;
 
-    @Column (name = "nome_atividade", length = 100, nullable = false)
-    public String nome_atividade;
+    @Column(name = "nome_atividade",length = 100)
+    private String nome_atividade;
 
     public int getId_atividade() {
         return id_atividade;
@@ -30,5 +33,4 @@ public class Atividade {
         this.nome_atividade = nome_atividade;
     }
 
-       
 }
