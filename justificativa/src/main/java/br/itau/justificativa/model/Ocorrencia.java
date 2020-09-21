@@ -1,5 +1,8 @@
 package br.itau.justificativa.model;
 
+import java.sql.Date;
+import java.sql.Time;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -23,10 +26,10 @@ public class Ocorrencia {
     private String descricao;
 
     @Column(name = "data_oc", length = 10)
-    private String data_oc;
+    private Date data_oc;
 
     @Column(name = "num_horas", length = 8)
-    private String num_horas;
+    private Time num_horas;
 
     @Column(name = "ponto_manual")
     private int ponto_manual;
@@ -66,19 +69,19 @@ public class Ocorrencia {
         this.descricao = descricao;
     }
 
-    public String getData_oc() {
+    public Date getData_oc() {
         return data_oc;
     }
 
-    public void setData_oc(String data_oc) {
+    public void setData_oc(Date data_oc) {
         this.data_oc = data_oc;
     }
 
-    public String getNum_horas() {
+    public Time getNum_horas() {
         return num_horas;
     }
 
-    public void setNum_horas(String num_horas) {
+    public void setNum_horas(Time num_horas) {
         this.num_horas = num_horas;
     }
 
