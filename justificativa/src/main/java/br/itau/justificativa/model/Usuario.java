@@ -2,9 +2,12 @@ package br.itau.justificativa.model;
 
 
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -35,8 +38,10 @@ public class Usuario {
     @Column (name = "gestor")
 	private int gestor;
 
-	// Relacionamento com tabela ocorrência	
-
+	// Relacionamento com tabela ocorrência
+	@OneToMany(mappedBy = "id_usuario")
+	private List<Ocorrencia> ocorrencias;
+	
 
 	//Getters and Setters
 	public int getId_usuario() {

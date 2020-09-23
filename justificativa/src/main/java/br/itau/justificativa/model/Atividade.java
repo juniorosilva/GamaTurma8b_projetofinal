@@ -1,8 +1,11 @@
 package br.itau.justificativa.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,6 +19,10 @@ public class Atividade {
 
     @Column(name = "nome_atividade",length = 100)
     private String nome_atividade;
+
+    //Relacionamento com a tabela itmn232_ocorrencia
+    @OneToMany(mappedBy = "id_atividade")
+    private List<Ocorrencia> ocorrencias;
 
     public int getId_atividade() {
         return id_atividade;

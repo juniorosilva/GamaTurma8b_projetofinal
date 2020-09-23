@@ -6,6 +6,8 @@ import java.sql.Time;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -39,8 +41,17 @@ public class Ocorrencia {
     @Column(name = "status")
     private int status;
 
-    //Relacionamento com tabela usuario
-   
+    //Relacionamento com tabela itmn232_usuario
+    @ManyToOne
+    @JoinColumn(name = "id_usuario_itmn232_usuario")
+    private Usuario usuario;
+
+    //Relacionamento com tabela itmn232_atividade
+    @ManyToOne
+    @JoinColumn(name = "id_atividade_itmn232_atividade")
+    private Atividade atividades;
+
+       
     //Getters and Setters
     public int getNum_seq() {
         return num_seq;
