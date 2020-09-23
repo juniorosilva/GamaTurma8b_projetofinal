@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
 @Entity
 @Table (name = "itmn232_ocorrencia")
 public class Ocorrencia {
@@ -19,7 +21,7 @@ public class Ocorrencia {
     @Column(name = "id_usuario")
     private int id_usuario;
 
-    @Column(name = "id_atividades")
+    @Column(name = "id_atividade")
     private int id_atividade;
 
     @Column(name = "descricao")
@@ -37,6 +39,9 @@ public class Ocorrencia {
     @Column(name = "status")
     private int status;
 
+    //Relacionamento com tabela usuario
+   
+    //Getters and Setters
     public int getNum_seq() {
         return num_seq;
     }

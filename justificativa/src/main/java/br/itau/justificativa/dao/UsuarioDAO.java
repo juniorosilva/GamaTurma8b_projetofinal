@@ -1,5 +1,9 @@
 package br.itau.justificativa.dao;
 
-public class UsuarioDAO {
-    
+import org.springframework.data.repository.CrudRepository;
+
+import br.itau.justificativa.model.Usuario;
+
+public interface UsuarioDAO extends CrudRepository<Usuario, Integer> {
+        
 }

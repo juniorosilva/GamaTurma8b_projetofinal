@@ -1,9 +1,13 @@
 package br.itau.justificativa.model;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+
 
 @Entity
 @Table(name="itmn232_usuario")
@@ -29,8 +33,12 @@ public class Usuario {
     private String link_foto;
 
     @Column (name = "gestor")
-    private int gestor;
+	private int gestor;
 
+	// Relacionamento com tabela ocorrência	
+
+
+	//Getters and Setters
 	public int getId_usuario() {
 		return id_usuario;
 	}
