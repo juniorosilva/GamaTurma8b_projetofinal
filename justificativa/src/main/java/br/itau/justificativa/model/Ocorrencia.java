@@ -20,11 +20,11 @@ public class Ocorrencia {
     @Column(name = "num_seq")
     private int num_seq;
 
-    @Column(name = "id_usuario")
-    private int id_usuario;
+/*     @Column(name = "id_usuario")
+    private int id_usuario; */
 
-    @Column(name = "id_atividade")
-    private int id_atividade;
+   /*  @Column(name = "id_atividade")
+    private int id_atividade; */
 
     @Column(name = "descricao")
     private String descricao;
@@ -43,13 +43,13 @@ public class Ocorrencia {
 
     //Relacionamento com tabela itmn232_usuario
     @ManyToOne
-    @JoinColumn(name = "id_usuario_itmn232_usuario")
+    @JoinColumn(name = "id_usuario") //revisar**
     private Usuario usuario;
 
     //Relacionamento com tabela itmn232_atividade
-    @ManyToOne
-    @JoinColumn(name = "id_atividade_itmn232_atividade")
-    private Atividade atividades;
+    /* @ManyToOne
+    @JoinColumn(name = "id_atividade_itmn232_atividade") //revisar**
+    private Atividade atividades; */
 
        
     //Getters and Setters
@@ -61,21 +61,21 @@ public class Ocorrencia {
         this.num_seq = num_seq;
     }
 
-    public int getId_usuario() {
+   /*  public int getId_usuario() {
         return id_usuario;
     }
 
     public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
-    }
+    } */
 
-    public int getId_atividade() {
+    /* public int getId_atividade() {
         return id_atividade;
     }
 
     public void setId_atividade(int id_atividade) {
         this.id_atividade = id_atividade;
-    }
+    } */
 
     public String getDescricao() {
         return descricao;

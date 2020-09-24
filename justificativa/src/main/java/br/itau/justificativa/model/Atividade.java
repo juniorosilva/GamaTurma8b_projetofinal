@@ -21,8 +21,8 @@ public class Atividade {
     private String nome_atividade;
 
     //Relacionamento com a tabela itmn232_ocorrencia
-    @OneToMany(mappedBy = "id_atividade")
-    private List<Ocorrencia> ocorrencias;
+    /* @OneToMany(mappedBy = "id_atividade")
+    private List<Ocorrencia> ocorrencias; */
 
     public int getId_atividade() {
         return id_atividade;

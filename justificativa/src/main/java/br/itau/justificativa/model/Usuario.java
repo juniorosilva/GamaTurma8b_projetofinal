@@ -39,7 +39,7 @@ public class Usuario {
 	private int gestor;
 
 	// Relacionamento com tabela ocorrência
-	@OneToMany(mappedBy = "id_usuario")
+	@OneToMany(mappedBy = "usuario")
 	private List<Ocorrencia> ocorrencias;
 	
 
