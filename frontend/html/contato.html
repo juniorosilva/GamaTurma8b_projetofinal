@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="..\css\estilo.css">
+
+</header>
+<title>Gama Academy - Curso de Front End</title>
+
+<body>
+
+    <table class="menu" border="0" align="center" width="100%">
+        <tr>
+            <td><a href="..\html\index.html" target="blank"><img src="..\imagens\logo-gama.png" width="100%"></a></td>
+            <td align="center">QUEM SOMOS</td>
+            <td align="center">CURSOS ONLINE</td>
+            <td align="center">GAMA EXPERIENCE</td>
+            <td align="center">PARA EMPRESAS</td>
+            <td align="center"><a href="..\html\contato.html" target="blank">CONTATO</a></td>
+            <td align="center">CONTEÚDO</td>
+        </tr>
+
+
+
+    </table>
+
+    <div id="area">
+        <form id="formulario" method="POST">
+            <FIeldset>
+                <legend>Formulário de contato para Cursos</legend>
+                <LABEL class="label1">Nome:</LABEL><input type="text" name="nome" class="campo_nome" required><br>
+                <LABEL class="label2">Email:</LABEL><input type="email" name="email" class="campo_email" required><br>
+                <LABEL class="label3">Senha:</LABEL><input type="password" name="senha" class="campo_senha" required><br>
+                <LABEL>Data Nascimento:</LABEL><input type="date" name="date" required><br>
+                <LABEL>Genero</LABEL><input type="radio" name="opcao" value="Masculino" /> Masculino<input type="radio"
+                    name="opcao" value="Feminino" /> Feminino<br>
+                <LABEL>Cursos</LABEL><select>
+                    <option value="PHP">PHP</option>
+                    <option value="XML">XML</option>
+                    <option value="JS">JS</option>
+                    <option value="ASP">ASP</option>
+                </select> <br>
+
+                <LABEL>Anexar arquivo</LABEL><input type="file" name="arquivo"><br>
+
+                <input type="submit" value="Enviar">
+            </FIeldset>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
