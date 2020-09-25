@@ -70,23 +70,11 @@ legend{
 
 
 }
-#formulario input.campo_email
+.campo_email
 {
     background-color: whitesmoke;
     position: absolute;
-    left:65px;
-    top:42px;
-    width: 240px;
-
-}
-
-#formulario input.campo_senha
-{
-    background-color: whitesmoke;
-    position: absolute;
-    left:65px;
-    top:64px;
-    width: 30px;
+    width: 300px;
 
 }
 
@@ -122,9 +110,12 @@ legend{
     
     min-height: 500px
 }
+
 .div2{
     border: 2px solid gray;	
    }
+
+
 
 
     /* 
