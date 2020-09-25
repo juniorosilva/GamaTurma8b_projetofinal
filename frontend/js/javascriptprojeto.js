@@ -6,17 +6,18 @@ var separador = " - ";
 //alert(empresa+separador+curso);
 
 
+// var nome = prompt("Insira seu nome");
 
 function validar() {
     // alert("oi funcionou");
 
-    var nome = formuser.nome.value;
+    var racf = formuser.racf.value;
     var email = formuser.email.value;
     var senha = formuser.senha.value;
 
-    if (nome == "") {
-        alert("Preencha o campo Nome");
-        formuser.nome.focus();
+    if (racf == "") {
+        alert("Preencha o campo User Name");
+        formuser.racf.focus();
         return false;
     }
 
@@ -27,11 +28,20 @@ function validar() {
     }
 
     if(senha=="" || senha.length <=5){
-        alert("Preencha o campo e digite uma senha maior que 6 caracteres");
+        alert("Preencha o campo e digite uma senha válida");
         formuser.senha.focus();
         return false;
 
     }
 
-    alert("Prezado "+nome+" estaremos lhe enviando o nosso contato para o email "+email);
+    
+    if (racf == "TIOPATI")
+    {
+        window.open("..\html\visaogestor.html")
+    }
+    else
+       {
+        window.open("..\html\visaocolaborador.html")
+        }
+
 }

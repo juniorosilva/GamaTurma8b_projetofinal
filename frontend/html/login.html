@@ -2,8 +2,8 @@
 <html>
 <header>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="..\css\estiloprojeto.css">
     <script type="text/javascript" src="..\js\javascriptprojeto.js"></script>
+    <link rel="stylesheet" href="..\css\estiloprojeto.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -29,22 +29,23 @@
 
     <div class="container">
         <div class="row"></div><br>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-2 div2"><br> 
-            <!-- ajustar tamanho da caixa e incluir forgot password -->
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-2 div2"><br>
+            <!--@resolver ajustar tamanho da caixa e incluir forgot password -->
+
             <form name="formuser" method="POST">
-                <form id="formulario" method="POST">
-                    <FIeldset>
-                        <legend>Sign In</legend><br>
-                        <LABEL>User Name:</LABEL><br><input type="text" name="nome" class="campo_nome" required><br><br>
-                        <LABEL>Senha:</LABEL><br><input type="password" name="senha" class="campo_senha" required><br><br>
+                <FIeldset>
+                <legend>Sign In</legend>
+                User Name: <input type="text" name="racf"><br><br>
+                Senha:<input type="text" name="senha"><br><br>
+                <input type="button" onclick="validar()" value="SIGN IN"><br><br>
+                <a href="..\html\forgetpassword.html" target="blank">Forget Password?</a>
+            </FIeldset>
+            </form>
 
-                        <input type="submit" value="SIGN IN"><br><br>
-
-                        <a href="..\html\forgetpassword.html" target="blank">Forget Password?</a>
-
-                    </FIeldset>
-                </form>
+                        <!--@resolver validacao dos campos racf e senha -->
+                        <!--@resolver pegar a entrada racf e validar se é gestor ou não  -->
         </div>
+    </div>
 
 
 </body>
