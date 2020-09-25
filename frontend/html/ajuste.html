@@ -63,7 +63,12 @@
 
             <div class="row">
                 <div class="col-md-2 col-sm-2 col-xs-2 div2">Descrição</div>
-                <div class="col-md-8 col-sm-8 col-xs-8 div2"><input type="text" name="nome" class="campo_nome" required width=300px height=300px></div>
+                <div class="col-md-8 col-sm-8 col-xs-8 div2"><form name = "descricao" method="POST">
+                    <textarea name="message" rows="5" cols="30">Insira sua justificativa aqui.</textarea>
+                    <br><br>
+                    <input type="submit" name = "descricao" onclick="return envio();">
+                  </form>
+                  </div>
                
      
             </div>
@@ -76,10 +81,13 @@
                 <div class="col-md-2 col-sm-2 col-xs-2 div2">Ajuste manual?</div>
                 <div class="col-md-8 col-sm-8 col-xs-8 div2"><input type="radio" name="opcao" value="Sim" /> Sim<br><input type="radio"
                 name="opcao" value="Não" /> Não<br>
-                
+            </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 div2">
+                <input type="submit" value="Atualizar">
+                </div>
                 
 
-            </div>
+            
                
      
             </div>
