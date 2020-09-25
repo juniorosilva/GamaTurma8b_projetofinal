@@ -1,69 +1,64 @@
 <!DOCTYPE html>
-<html>
-<header>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="..\css\estilo.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
 
-    <style>
-           
-        .titulo2{
-        color:darkviolet;
-        font-size: 14px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: bold;
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-        }
-        
-        /* isso é um comentário em CSS */
-    </style>
-</header>
-<title>Gama Academy - Curso de Front End</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+
+    <script src="/js/login.js"></script>
+
+</head>
+
+<!-- <title>Schedule System - Página Inicial</title> -->
+
+
+<h2 class="titulo2">Schedule System</h2>
+
 
 <body>
+    <div class="container h-100 d-flex"> <!-- ocupar toda a página, centralizada na vertical -->
+        <div class="row w-100 align-items-center"> <!-- ocupa toda a largula centralizando o conteúdo -->
+            <div class="col-8 mx-auto"> <!-- uma única coluna ocupando 8 dos 12 espaços, centralizada  -->
 
-    
-    <table class="menu" border="0" align="center" width="100%">
-        <tr>
-            <td><a href="..\html\index.html" target="blank"><img src="..\imagens\logo-gama.png" width="100%"></a></td>
-            <td align="center">QUEM SOMOS</td>
-            <td align="center">CURSOS ONLINE</td>
-            <td align="center">GAMA EXPERIENCE</td>
-            <td align="center">PARA EMPRESAS</td>
-            <td align="center"><a href="..\html\contato.html" target="blank">CONTATO</a></td>
-            <td align="center">CONTEÚDO</td>
-        </tr>
+                <div class="jumbotron">
+                    <div class="row"> 
+                        <div class="col">
+                            <div class="text-center" id="msgErro" ></div>
+                        </div>
+                    </div>
+
+                    <!-- <form>
+                        <input class="form-control" type="text" id="txtUsuario" placeholder="email/cpf">
+                        <input class="form-control" type="password" id="txtSenha" placeholder="senha">
+                        <div class="col text-center">
+                            <button class="btn btn-outline-primary" onclick="autenticar(event)"> Login</button>
+                        </div>
+                    </form> -->
+
+                    <form >
+                        <FIeldset >
+                        <legend>Login</legend><br>
+                        <input class="form-control" type="text" id="txtUsuario" placeholder="RACF">
+                        <input class="form-control" type="password" id="txtSenha" placeholder="senha">
+                        <div class="col text-center">
+                            <button class="btn btn-outline-primary" onclick="autenticar(event)"> Login</button>
+                        </div>
+                    </FIeldset>
+                    </form>
 
 
 
-    </table>
 
-    <h2 class="titulo2">QUEM SOMOS</h2>
 
-    <p>As escolas tradicionais <u><b>trabalham com metodologias</b></u> que não conseguem suprir as novas
-        demandas do mundo.<br> Preparam profissionais que não são capazes de assumir vagas de
-        emprego no mercado atual e, dificilmente, lidar com os avanços tecnológicos. <br>Não falam
-        sobre soft skills, habilidades altamente requisitadas. <br>E não abordam a importância
-        da multidisciplinaridade.<br><br>
 
-        A Gama Academy forma profissionais com quatro características fundamentais:</p>
+                </div>
 
-    <ul type="square">
-        <li style="color:red;font-weight: bold;">Vontade de Aprender e Ensinar;</li>
-        <li>Soft Skills;</li>
-        <li>Mindset Empreendedor;</li>
-        <li>Inovação Criativa.</li>
-
-    </ul>
-
-    <div align="center">
-        <h2 class="titulo2">VIDEO INSTITUCIONAL</h2>
-
-        <video controls=" autoplay=" true width="400" height="300">
-            <source src="..\videos\gama.mp4" />
-
-        </video>
+            </div>
+        </div>
     </div>
-
 </body>
-
 </html>

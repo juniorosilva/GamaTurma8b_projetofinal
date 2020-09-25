@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script type="text/javascript" src="..\js\javascriptprojeto.js"></script>
+    <script type="text/javascript" src="..\js\login.js"></script>
     <link rel="stylesheet" href="..\css\estiloprojeto.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -15,9 +15,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+</head>
 
 
-</header>
 <title>Schedule System - Página Inicial</title>
 
 
@@ -29,15 +29,15 @@
 
     <div class="container">
         <div class="row"></div><br>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-2 div2"><br>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-2 div2"  ><br>
             <!--@resolver ajustar tamanho da caixa e incluir forgot password -->
 
-            <form name="formuser" method="POST">
+            <form name="formuser" method="POST" >
                 <FIeldset>
                 <legend>Sign In</legend>
-                User Name: <input type="text" name="racf"><br><br>
-                Senha:<input type="text" name="senha"><br><br>
-                <input type="button" onclick="validar()" value="SIGN IN"><br><br>
+                User Name: <input type="text" name="racf" placeholder="digite sua RACF"><br><br>
+                Senha:<input type="text" name="senha" placeholder="digite sua senha"><br><br>
+                <button class="btn btn-outline-primary" onclick="autenticar(event)"> Login</button><br><br>
                 <a href="..\html\forgetpassword.html" target="blank">Forget Password?</a>
             </FIeldset>
             </form>
