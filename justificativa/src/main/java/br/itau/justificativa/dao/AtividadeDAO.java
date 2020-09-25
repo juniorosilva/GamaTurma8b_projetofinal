@@ -7,3 +7,5 @@ import br.itau.justificativa.model.Atividade;
 public interface AtividadeDAO extends CrudRepository<Atividade, Integer> {
     
 }
+
+

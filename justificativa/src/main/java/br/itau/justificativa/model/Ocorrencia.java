@@ -10,6 +10,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 
 @Entity
@@ -18,9 +20,9 @@ public class Ocorrencia {
 
     @Id
     @Column(name = "num_seq")
-    private int num_seq;
+    private int num_seq; //alterado para testar JPA
 
-/*     @Column(name = "id_usuario")
+    /*@Column(name = "id_usuario")
     private int id_usuario; */
 
    /*  @Column(name = "id_atividade")
@@ -43,13 +45,23 @@ public class Ocorrencia {
 
     //Relacionamento com tabela itmn232_usuario
     @ManyToOne
-    @JoinColumn(name = "id_usuario") //revisar**
+    @JoinColumn(name = "id_usuario") 
+    @JsonIgnoreProperties("ocorrencias")
     private Usuario usuario;
 
     //Relacionamento com tabela itmn232_atividade
-    /* @ManyToOne
-    @JoinColumn(name = "id_atividade_itmn232_atividade") //revisar**
-    private Atividade atividades; */
+    @ManyToOne
+    @JoinColumn(name = "id_atividade") 
+    @JsonIgnoreProperties("ocorrencias")
+    private Atividade atividade;
+
+    public Ocorrencia(){
+
+    }
+
+    public Ocorrencia(int num_seq){
+        this.num_seq = num_seq;
+    }
 
        
     //Getters and Setters
@@ -115,6 +127,22 @@ public class Ocorrencia {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Atividade getAtividade() {
+        return atividade;
+    }
+
+    public void setAtividade(Atividade atividade) {
+        this.atividade = atividade;
     }
     
 }

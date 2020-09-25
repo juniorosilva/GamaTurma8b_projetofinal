@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 
 @Entity
@@ -40,7 +42,22 @@ public class Usuario {
 
 	// Relacionamento com tabela ocorrência
 	@OneToMany(mappedBy = "usuario")
+	@JsonIgnoreProperties("usuario")
 	private List<Ocorrencia> ocorrencias;
+
+	public Usuario(){
+
+	}
+
+	public Usuario(String racf){
+		this.racf = racf;
+	}
+
+	public Usuario(int id_usuario, String racf, String email_usuario){
+		this.id_usuario = id_usuario;
+		this.racf = racf;
+		this.email_usuario = email_usuario;
+	}
 	
 
 	//Getters and Setters
@@ -98,6 +115,14 @@ public class Usuario {
 
 	public void setGestor(int gestor) {
 		this.gestor = gestor;
+	}
+
+	public List<Ocorrencia> getOcorrencias() {
+		return ocorrencias;
+	}
+
+	public void setOcorrencias(List<Ocorrencia> ocorrencias) {
+		this.ocorrencias = ocorrencias;
 	}
 
 }
